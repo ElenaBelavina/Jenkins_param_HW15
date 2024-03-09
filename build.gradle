@@ -29,6 +29,7 @@ allure {
 dependencies {
     testImplementation(
             'com.codeborne:selenide:6.19.1',
+            'com.github.javafaker:javafaker:1.0.2',
             'org.junit.jupiter:junit-jupiter:5.10.0',
             'org.slf4j:slf4j-simple:2.0.7',
             "io.qameta.allure:allure-selenide:$allureVersion",
@@ -45,8 +46,8 @@ tasks.withType(Test) {
         }
     }
 }
-task demoqa_test(type: Test) {
+task fillForm_test(type: Test) {
     useJUnitPlatform {
-        includeTags("demoqa")
+        includeTags("fillForm")
     }
 }
