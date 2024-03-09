@@ -30,6 +30,7 @@ public class RegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
 
+
     public RegistrationPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
@@ -129,8 +130,6 @@ public class RegistrationPage {
 
         return this;
     }
-
-
 
     public RegistrationPage checkModalDialog() {
         modalDialog.shouldNot(appear);
