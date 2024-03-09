@@ -38,6 +38,6 @@ public class TestData {
         return null;
     }
     String getPicture(){
-        return faker.options().option("giraffe.jpeg","cat.jpeg","dog.jpg");
+        return faker.options().option("giraffe.jpeg", "kitten.jpeg", "puppy.jpg");
     }
 }
