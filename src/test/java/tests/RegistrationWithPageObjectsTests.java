@@ -9,6 +9,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("demoqa")
     void successfulRegistrationTest() {
         registrationPage.openPage().closeBanners()
                 .setFirstName("Alex")
