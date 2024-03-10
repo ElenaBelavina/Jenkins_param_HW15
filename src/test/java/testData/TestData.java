@@ -1,12 +1,14 @@
 package testdata;
 
 import com.github.javafaker.Faker;
+import config.RegistrationConfig;
+import org.aeonbits.owner.ConfigFactory;
 
 public class TestData {
     Faker faker = new Faker();
-
-    public String firstName = faker.name().firstName(),
-            lastName = faker.name().lastName(),
+    RegistrationConfig registrationConfig = ConfigFactory.create(RegistrationConfig.class);
+    public String firstName = registrationConfig.firstName(),
+            lastName = registrationConfig.lastName(),
             userEmail = faker.internet().emailAddress(),
             gender = faker.options().option("Male","Female","Other"),
             userNumber = String.valueOf(faker.phoneNumber().subscriberNumber(10)),
