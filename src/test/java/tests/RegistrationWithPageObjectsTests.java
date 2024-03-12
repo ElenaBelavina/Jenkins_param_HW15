@@ -1,20 +1,17 @@
 package tests;
 
 import io.qameta.allure.*;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import static io.qameta.allure.Allure.step;
-//import config.RegistrationConfig;
 
 import testdata.TestData;
-@DisplayName("Тесты на заполнение формы регистрации. ДЗ_15")
+@DisplayName("Параметризированные тесты в Jenkins. ДЗ_15")
 public class RegistrationWithPageObjectsTests extends TestBase {
-   // RegistrationConfig registrationConfig = ConfigFactory.create(RegistrationConfig.class);
 
-    RegistrationPage registrationPage = new RegistrationPage();
+      RegistrationPage registrationPage = new RegistrationPage();
     TestData testData = new TestData();
     @Test
     @Feature("Проверка формы регистрации")
@@ -81,6 +78,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     @Owner("Elena Belavina")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Негативный тест (заполняем не все обязательные поля формы)")
+
     @Tag("fillForm")
     @Test
     void registrationNegativeTest(){

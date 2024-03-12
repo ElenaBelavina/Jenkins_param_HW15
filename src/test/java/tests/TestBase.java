@@ -6,16 +6,12 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import config.DriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-//import org.aeonbits.owner.ConfigFactory;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
-import java.util.Objects;
-
-//import static com.codeborne.se lenide.Selenide.executeJavaScript;
 
 public class TestBase {
 
@@ -50,5 +46,4 @@ public class TestBase {
 
         Selenide.closeWebDriver();
     }
-
 }

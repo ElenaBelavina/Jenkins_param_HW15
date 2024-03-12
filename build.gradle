@@ -25,6 +25,13 @@ allure {
     }
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 
 dependencies {
     testImplementation(
@@ -33,12 +40,13 @@ dependencies {
             'org.aeonbits.owner:owner:1.0.12',
             'org.junit.jupiter:junit-jupiter:5.10.0',
             'org.slf4j:slf4j-simple:2.0.7',
-            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion"
     )
 }
 
 tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
@@ -49,6 +57,7 @@ tasks.withType(Test) {
 }
 task fillForm_test(type: Test) {
     useJUnitPlatform {
+        systemProperties(System.getProperties())
         includeTags("fillForm")
     }
 }
