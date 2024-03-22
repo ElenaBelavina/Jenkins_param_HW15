@@ -1,0 +1,9 @@
+6700331259:AAF3fqet1wUWtBaFvHvo4dsb2bL0VqwkcK8
+qaguru_alerts_bot
+https://api.telegram.org/botXXX:YYYYY/getUpdates
+https://api.telegram.org/bot6700331259:AAF3fqet1wUWtBaFvHvo4dsb2bL0VqwkcK8/getUpdates //эту ссылку вставляем в браузер
+
+id: -1002085653756 // Id чата
+
+curl -X POST H: 'Content-Type:application/json' d: '{"chat_id":"-1002085653756", "text":"This is a test from qa.guru"}' https://api.telegram.org/bot6700331259:AAF3fqet1wUWtBaFvHvo4dsb2bL0VqwkcK8/sendMessage
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar
