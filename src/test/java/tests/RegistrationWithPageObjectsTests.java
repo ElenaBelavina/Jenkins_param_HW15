@@ -8,7 +8,7 @@ import pages.RegistrationPage;
 import static io.qameta.allure.Allure.step;
 
 import testdata.TestData;
-@DisplayName("Параметризированные тесты в Jenkins_ДЗ_15/Уведомлени в ТелеграмБот_ДЗ16")
+@DisplayName("Параметризированные тесты в Jenkins_ДЗ_15/Уведомления в ТелеграмБот_ДЗ16")
 public class RegistrationWithPageObjectsTests extends TestBase {
 
       RegistrationPage registrationPage = new RegistrationPage();
